@@ -1,0 +1,53 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<html> 
+<body style="background-color: #0c0f1d;" onload="javascript:initialize()">
+
+
+
+    <div class ="banner">
+        <div class ="banner-text">
+           <h2 id = "logo">Isn'tgram</h2>
+           <h1> 
+                <img src="../static/images/profilePicture.png" class="avatar" id="avatar"></img>
+                <label id="name">Welcome, name</label>
+            </h1>
+        </div>
+    </div>
+        
+        
+
+<div class="tab">
+    <button class="tablinks" onclick="openBio()">Bio</button>
+    <button class="tablinks" onclick="openMessages()">Messages</button>
+    <button class="tablinks" onclick="openFollowing()">Following</button>
+    <button class="tablinks" onclick="fillPosts()">Feed</button>
+    <button class="tablinks" onclick="openPost()">Post</button>
+    <button class="logout" onclick="logOut()">Log Out</button>
+</div>
+
+
+<div class="row">
+    <div class="centerColumn">
+        <div class="card" id="postList">
+
+
+        </div>
+    </div>
+</div>
+<!--Content for the tabs-->
+<!-- <div id = "yourClasses">
+    <h3 id = "tablelabel">Your Feed</h3>
+    <p>
+    <body onload="javascript:initialize('myTable')">
+        <img width="727" height="420" src="{{ url_for('static',filename='images/userdata/1/fnafmovie.png') }}" alt="Tartaglia">
+        <table id="myTable" class = "center"></table>
+        
+    </body>
+    </p>
+</div>
+-->
+</body>
+</html>
+{% endblock %}

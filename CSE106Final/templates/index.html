@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="{{ url_for('static',filename='code.js') }}"></script>
+        <link rel="stylesheet" href="{{ url_for('static',filename='styles/sheet.css') }}">
+        <link rel="icon" href="{{ url_for('static',filename='images/favicon.ico') }}">
+        <title>isn'tgram</title>
+    </head>
+    {% block content %}
+    <body style="background-color: #0c0f1d;"></body>
+
+
+    <div class="centerCard">
+        <h7 class= "title" style="color: white;">Isn'tGram</h7>
+        <div class="infoCard">
+            <label class = 'center_label' id="message">Welcome!</label>
+           <!-- <label id="message">Welcome!</label>-->
+                <label style="color: white;" ></label>
+                <input class="rounded" id="username" placeholder="Enter Username" type="text" />
+
+                <label  style="color: white;"></label>
+                <input class="rounded" id="password" placeholder="Enter Password" type="text" />
+            </div>
+            <button class="loginCard"  onclick="readLogin()">Log In</button>
+    </div>
+    </body>
+
+    {% endblock %}
+    </html>
